@@ -1,6 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import App from './App';
+
 
 test('Strike is found', () => {
   const { getAllByText } = render(<App />);
@@ -21,3 +22,9 @@ test('Foul is found', () => {
   getAllByText(/foul/i);
 });
 
+
+const app = render(<App />)
+const strikeBtn = app.getByTestId('strike-btn');
+const strikes = app.getByTestId('strikes');
+fireEvent.click(strikeBtn)
+expect(strikes.textContent).toBe('Strike 1');

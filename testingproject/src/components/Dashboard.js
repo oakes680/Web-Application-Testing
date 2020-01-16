@@ -28,7 +28,7 @@ const Dashboard = () => {
   return (
     <div>
       <Display strike={strike} ball={ball} foul={foul} hit={hit} />
-      <button onClick={clickStrike}>strike</button>
+      <button onClick={clickStrike} data-testid="strike-btn">strike</button>
       <button onClick={clickBall}>ball</button>
       <button onClick={clickFoul} >foul</button>
       <button onClick={clickHit}>hit</button>
