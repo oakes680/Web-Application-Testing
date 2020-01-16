@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Display = ({ strike, ball, foul, hit }) => {
+const Display = ({ strike, ball, foul, hit, score }) => {
   return (
     <div>
       <p>Strike {strike} </p> 
